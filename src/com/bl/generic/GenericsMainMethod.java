@@ -1,7 +1,6 @@
 package com.bl.generic;
 
 
-
 public class GenericsMainMethod {
     static void maxIntegerNumber(Integer a, Integer b, Integer c){
         Integer maximum = a;
@@ -23,6 +22,16 @@ public class GenericsMainMethod {
         System.out.println(maximum + " is largest");
     }
 
+    static void maxStringValue(String value1, String value2, String value3){
+        String maximum = value1;
+        if(value2.compareTo(maximum) > 0)
+            maximum = value2;
+        if (value3.compareTo(maximum) > 0) {
+            maximum = value3;
+        }
+        System.out.println(maximum + " is largest");
+    }
+
     public static void main(String[] args) {
         System.out.println("Generics Example");
 
@@ -31,5 +40,8 @@ public class GenericsMainMethod {
 
         float floatA = 10.1f, floatB = 10.8f, floatC = 20.1f;
         maxFloatNumber(floatA,floatB,floatC);
+
+        String value1 = "Apple", value2 = "Peach", value3 =  "Banana";
+        maxStringValue(value1,value2,value3);
     }
 }
